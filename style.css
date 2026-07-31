@@ -1,0 +1,544 @@
+/* ===========================================
+   UNTUK ISTRIKU IJAAAA 💙
+   Theme : Ocean Blue
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:white;
+    min-height:100vh;
+    background:#7fd3ff;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+        linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.2)),
+        url("assets/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    z-index:-5;
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.background::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,180,255,.15),
+        rgba(255,255,255,.05),
+        rgba(0,80,150,.20)
+    );
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:25px;
+    text-align:center;
+}
+
+/* tampil pertama */
+
+#login{
+    display:flex;
+}
+
+#loading,
+#gift,
+#gallery,
+#letter{
+    display:none;
+}
+
+/* ===========================
+   LOGIN BOX
+=========================== */
+
+.login-box{
+
+    width:360px;
+    max-width:95%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.login-box h3{
+
+    font-size:18px;
+    margin-bottom:10px;
+
+}
+
+.login-box h1{
+
+    font-family:'Pacifico',cursive;
+    font-size:34px;
+    line-height:1.4;
+    margin-bottom:20px;
+
+}
+
+.login-box p{
+
+    margin-bottom:18px;
+
+}
+
+input{
+
+    width:100%;
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:18px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+button{
+
+    border:none;
+
+    background:#1e90ff;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+button:hover{
+
+    transform:scale(1.06);
+
+    background:#0b7ce7;
+
+}
+
+#error{
+
+    margin-top:15px;
+    color:#ffeaea;
+    font-weight:bold;
+
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.spinner{
+
+    width:85px;
+    height:85px;
+
+    border-radius:50%;
+
+    border:8px solid rgba(255,255,255,.3);
+
+    border-top:8px solid white;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===========================
+   GIFT
+=========================== */
+
+.title{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    margin-bottom:25px;
+
+    font-size:20px;
+
+}
+
+.gift-box{
+
+    font-size:110px;
+
+    animation:giftFloat 2s ease-in-out infinite;
+
+    margin:30px;
+
+}
+
+@keyframes giftFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}/* ===========================
+   GALERI FOTO
+=========================== */
+
+.photos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+
+    width:320px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.card p{
+
+    padding:18px;
+
+    font-size:17px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   SURAT
+=========================== */
+
+.letter-box{
+
+    width:850px;
+
+    max-width:95%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.letter-box h1{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.letter-box p{
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+.letter-box h2{
+
+    margin-top:25px;
+
+}
+
+/* ===========================
+   FLOATING HEART
+=========================== */
+
+#hearts{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-1;
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:25px;
+
+animation:loveFall linear forwards;
+
+}
+
+@keyframes loveFall{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   FADE ANIMATION
+=========================== */
+
+.fade{
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.login-box{
+
+width:95%;
+
+padding:25px;
+
+}
+
+.login-box h1{
+
+font-size:28px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.gift-box{
+
+font-size:90px;
+
+}
+
+.card{
+
+width:95%;
+
+}
+
+.card img{
+
+height:300px;
+
+}
+
+.letter-box{
+
+padding:25px;
+
+}
+
+.letter-box h1{
+
+font-size:30px;
+
+}
+
+.letter-box p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+input{
+
+font-size:16px;
+
+}
+
+}
